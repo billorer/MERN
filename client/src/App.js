@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
 import './App.css';
 
 const App = () => {
-  return <div className='App'>My App</div>;
+  return (
+    <Router>
+      <Fragment>
+        <Navbar />
+        <div className='container' />
+      </Fragment>
+    </Router>
+  );
 };
 
 export default App;
